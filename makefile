@@ -1,5 +1,5 @@
 all:
-	gcc main.c -o main
+	g++ main.cc -o main
 run:
 	./main
 clean:
