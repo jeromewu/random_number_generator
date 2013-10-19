@@ -30,7 +30,7 @@ void CASR(bool input[CASR_IN]){
     bool tmp[CASR_IN];
     memcpy(tmp,input,sizeof(bool)*CASR_IN);
     for(int i=1;i<CASR_IN-1;i++){
-	input[i] = tmp[i-1] ^ tmp[i+1];
+	input[i] = tmp[i-1] ^ tmp[i] ^ tmp[i+1];
     }
     input[0] = tmp[CASR_IN-1] ^ tmp[0] ^ tmp[1];
     input[CASR_IN-1] = tmp[CASR_IN-2] ^ tmp[CASR_IN-1] ^ tmp[0];
